@@ -1,12 +1,8 @@
 ![SmartLogin](http://www.smartlogin.com.ar/images/logo.png)
+
 [www.smartlogin.com.ar](http://www.smartlogin.com.ar)
 Documentación de acceso a la API de SmartLogin
 
-----------
-
-[TOC]
-
-----------
 
 ----------
 
