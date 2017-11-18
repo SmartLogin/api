@@ -10,7 +10,7 @@ $token = 'MI_API_Token';	//Del panel de clientes
 //Inicialización de CURL
 $ch = curl_init($endpoint.'/nodes');
 curl_setopt_array($ch, array(
-    CURLOPT_HTTPHEADER  => array('X-User:'. $key, 'X-Authorization: '. $token),
+    CURLOPT_HTTPHEADER  => array('X-KEY:'. $key, 'X-TOKEN: '. $token),
     CURLOPT_RETURNTRANSFER  =>true,
     CURLOPT_VERBOSE     => 1
 ));
@@ -25,7 +25,7 @@ curl_close($ch);
 // Estado del nodo TEST001
 $ch = curl_init($endpoint.'/nodes/TEST001');
 curl_setopt_array($ch, array(
-    CURLOPT_HTTPHEADER  => array('X-User:'. $key, 'X-Authorization: '. $token),
+    CURLOPT_HTTPHEADER  => array('X-KEY:'. $key, 'X-TOKEN: '. $token),
     CURLOPT_RETURNTRANSFER  =>true,
     CURLOPT_VERBOSE     => 1
 ));
