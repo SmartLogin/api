@@ -164,6 +164,8 @@ La URL base de la API se encuentra en
 #### /contacts/new
     https://clientes.smartlogin.com.ar/api/contacts/new
 
+ATENCIÓN: Al llamar a este endpoint, los contactos obtenidos serán marcados como exportados y no volverán a aparecer ante una nueva llamada.
+
 ```
 [
 	{
