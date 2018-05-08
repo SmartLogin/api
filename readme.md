@@ -1,4 +1,4 @@
-![SmartLogin](http://www.smartlogin.com.ar/images/logo.png)
+![SmartLogin](http://www.smartlogin.com.ar/assets/images/logo-2209x475.png)
 
 [www.smartlogin.com.ar](http://www.smartlogin.com.ar)
 
@@ -38,11 +38,13 @@ La URL base de la API se encuentra en
 
     https://clientes.smartlogin.com.ar/api
 
+| Endpoint             | Descripción              
+ --------------------- | ------------------------------------------------
+| `/nodes`             | Ver el estado de todos los nodos registrados
+| `/contacts`         | Obtener información de los contactos registrados
 
-/nodes
-/nodes?healthy
-/nodes?unhealthy
-/nodes/:gwid
+
+### Nodos
 
 | Endpoint             | Descripción              
  --------------------- | ------------------------------------------------
@@ -54,6 +56,7 @@ La URL base de la API se encuentra en
 
 #### /nodes
     https://clientes.smartlogin.com.ar/api/nodes
+
 
 ```
 [
@@ -150,3 +153,60 @@ La URL base de la API se encuentra en
    "alert_last_reported_mem_free":false
 }
 ```
+
+### Contactos
+| Endpoint             | Descripción              
+ --------------------- | ------------------------------------------------
+| `/contacts/new`      | Obtener los nuevos contactos que aun no se han exportado
+| `/contacts/:id`       | Obtener información del contacto cuyo id es `:id`
+
+
+#### /contacts/new
+    https://clientes.smartlogin.com.ar/api/contacts/new
+
+```
+[
+	{
+		"id": 123,
+		"name": "Max",
+		"last_name": "Power",
+		"email": "maxpower@****.com",
+		"age": 35,
+		"birth": "24/04/1983",
+		"gender": "M",
+		"origin": "Facebook",
+		"created_at": "09/11/2016 20:40:40",
+		"location": "Local 1"
+	},
+	{
+		"id": 135,
+		"name": "Jane",
+		"last_name": "Doe",
+		"email": "janedoe@***.com",
+		"age": 28,
+		"birth": "25/10/1989",
+		"gender": "F",
+		"origin": "Facebook",
+		"created_at": "10/11/2016 21:52:03",
+		"location": "Local 3"
+	}
+]	
+```
+
+#### /contacts/:id
+    https://clientes.smartlogin.com.ar/api/contacts/123
+```
+{
+	"id": 123,
+	"name": "Max",
+	"last_name": "Power",
+	"email": "maxpower@****.com",
+	"age": 35,
+	"birth": "24/04/1983",
+	"gender": "M",
+	"origin": "Facebook",
+	"created_at": "09/11/2016 20:40:40",
+	"location": "Local 1"
+},
+```
+    
